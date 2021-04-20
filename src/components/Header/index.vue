@@ -5,6 +5,10 @@
       </div>
       <div class="header__middle">
         <img class="mobile-logo" src="../../assets/store-logo.png" alt="">
+        <div class="mobile-cart">
+          <FontAwesomeIcon icon="shopping-cart"/>
+          <span class="cart-badge">0</span>
+        </div>
       </div>
       <div class="header__bottom">
         <div class="mobile-menu">
@@ -26,9 +30,9 @@ import Vue from 'vue';
 import Component from 'vue-class-component';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faBars);
+library.add(faBars, faShoppingCart);
 @Component({
   components: {
     FontAwesomeIcon,
