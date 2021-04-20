@@ -8,8 +8,10 @@
       </div>
       <div class="header__bottom">
         <div class="mobile-menu">
-          <FontAwesomeIcon class="mobile-menu__burger" icon="bars"/>
-          <div class="mobile-menu__dropdown">
+          <button v-on:click="toggleMobileMenu">
+            <FontAwesomeIcon class="mobile-menu__burger" icon="bars"/>
+          </button>
+          <div v-bind:class="mobileMenuIsActive ? 'mobile-menu__dropdown' : 'hide'">
             <ul>
               <li v-for="item in menuOptions" v-bind:key="item">{{item}}</li>
             </ul>
@@ -41,7 +43,13 @@ export default class Header extends Vue {
     'Jewelery',
     'Men Clothing',
     'Women Clothing',
-  ]
+  ];
+
+  mobileMenuIsActive = false;
+
+  toggleMobileMenu():void {
+    this.mobileMenuIsActive = !this.mobileMenuIsActive;
+  }
 }
 </script>
 

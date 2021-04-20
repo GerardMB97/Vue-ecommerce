@@ -27,6 +27,9 @@ header{
         font-size: 20px;
         margin: 10px 15px;
       }
+      .hide{
+        display: none;
+      }
       .mobile-menu__dropdown{
         background-color: $white;
         box-shadow: 2px 2px 6px rgba(206, 204, 204, 0.5);
@@ -44,8 +47,8 @@ header{
             all: unset;
             box-sizing: border-box;
             height: 40px;
-            border-bottom: 1px solid $purple;
-            padding-left: 10px;
+            border-bottom: 1px solid $transparentPurple;
+            padding-left: 20px;
             padding-top: 10px;
             width: 100%;
           }
