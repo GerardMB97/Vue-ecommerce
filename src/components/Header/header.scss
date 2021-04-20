@@ -11,8 +11,15 @@ header{
   }
   .header__middle{
     background-color: $gray;
+    display: flex;
     height: 50%;
     width: 100%;
+
+    .mobile-logo{
+      height: 30px;
+      margin: auto;
+      width: 30px;
+    }
   }
   .header__bottom{
     background-color: $white;
@@ -21,6 +28,10 @@ header{
 
     .mobile-menu{
       position: relative;
+
+      button{
+        all: unset;
+      }
 
       .mobile-menu__burger{
         color: $purple;

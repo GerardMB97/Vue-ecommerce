@@ -4,7 +4,7 @@
 
       </div>
       <div class="header__middle">
-
+        <img class="mobile-logo" src="../../assets/store-logo.png" alt="">
       </div>
       <div class="header__bottom">
         <div class="mobile-menu">
