@@ -1,0 +1,159 @@
+@import '../../assets/styles/colors';
+@import '../../assets/styles/mixins';
+
+header{
+  width: 100%;
+  height: 100px;
+  .header__top{
+    display: none;
+  }
+  .header__middle{
+    background-color: $gray;
+    height: 50%;
+    width: 100%;
+    @include flex(row, space-between, center);
+
+    ul{
+      display: none;
+    }
+
+    .mobile-logo{
+      height: 30px;
+      margin-left: calc(50% - 15px);
+      width: 30px;
+    }
+    .mobile-cart{
+      color: $purple;
+      font-size: 20px;
+      margin-right: 20px;
+      position: relative;
+
+      .cart-badge{
+        font-size: 15px;
+        left: -5px;
+        position: absolute;
+        top: 10px
+      }
+    }
+  }
+  .header__bottom{
+    background-color: $white;
+    height: 50%;
+    width: 100%;
+
+    .desktop-menu{
+      display: none;
+    }
+
+    .mobile-menu{
+      position: relative;
+      width: 100px;
+
+      button{
+        all: unset;
+        cursor: pointer;
+      }
+
+      .mobile-menu__burger{
+        color: $purple;
+        font-size: 20px;
+        margin: 10px 15px;
+      }
+      .hide{
+        display: none;
+      }
+      .mobile-menu__dropdown{
+        background-color: $white;
+        box-shadow: 2px 2px 6px rgba(206, 204, 204, 0.5);
+        position: absolute;
+        left: 40%;
+        width: 200px;
+
+        ul{
+          all: unset;
+          height: 100%;
+          width: 100%;
+          @include flex(column, center, flex-start);
+
+          li{
+            all: unset;
+            box-sizing: border-box;
+            height: 40px;
+            border-bottom: 1px solid $transparentPurple;
+            padding-left: 20px;
+            padding-top: 10px;
+            width: 100%;
+          }
+          li:last-child{
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+  header{
+    .header__top{
+      background-color: $gray;
+      height: 50px;
+      width: 100%;
+      @include flex(row, center, space-between)
+    }
+    .header__middle{
+      background-color: $white;
+      border-bottom: 1px solid $transparentPurple;
+      height: 75px;
+      @include flex(row, space-between, center);
+
+      .mobile-logo{
+        height: 50px;
+        width: 50px;
+        margin-left: 0px;
+      }
+      .mobile-cart{
+        width: 300px;
+        @include flex(row, flex-end, center);
+
+        .cart-badge{
+          left: 270px
+        }
+      }
+      ul{
+        all: unset;
+        margin-left: 20px;
+        width: 300px;
+        @include flex(row, flex-start, center);
+
+        li{
+          all: unset;
+          color: $purple;
+          font-size: 20px;
+          font-weight: bold;
+          margin-right: 20px;
+        }
+      }
+    }
+    .header__bottom{
+      height: 50px;
+      @include flex(row, flex-start, center);
+
+      .mobile-menu{
+        display: none;
+      }
+      .desktop-menu{
+        all:unset;
+        margin-left: 20px;
+        width: 400px;
+        @include flex(row, flex-start, center);
+
+        li{
+          all: unset;
+          color: $purple;
+          font-size: 15px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
