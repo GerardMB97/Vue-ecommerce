@@ -4,8 +4,6 @@
 header{
   width: 100%;
   height: 100px;
-  background-color: red;
-
   .header__top{
     display: none;
   }
@@ -14,6 +12,10 @@ header{
     height: 50%;
     width: 100%;
     @include flex(row, space-between, center);
+
+    ul{
+      display: none;
+    }
 
     .mobile-logo{
       height: 30px;
@@ -39,11 +41,17 @@ header{
     height: 50%;
     width: 100%;
 
+    .desktop-menu{
+      display: none;
+    }
+
     .mobile-menu{
       position: relative;
+      width: 100px;
 
       button{
         all: unset;
+        cursor: pointer;
       }
 
       .mobile-menu__burger{
@@ -58,7 +66,7 @@ header{
         background-color: $white;
         box-shadow: 2px 2px 6px rgba(206, 204, 204, 0.5);
         position: absolute;
-        left: 5%;
+        left: 40%;
         width: 200px;
 
         ul{
@@ -79,6 +87,71 @@ header{
           li:last-child{
             border-bottom: none;
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+  header{
+    .header__top{
+      background-color: $gray;
+      height: 50px;
+      width: 100%;
+      @include flex(row, center, space-between)
+    }
+    .header__middle{
+      background-color: $white;
+      border-bottom: 1px solid $transparentPurple;
+      height: 75px;
+      @include flex(row, space-between, center);
+
+      .mobile-logo{
+        height: 50px;
+        width: 50px;
+        margin-left: 0px;
+      }
+      .mobile-cart{
+        width: 300px;
+        @include flex(row, flex-end, center);
+
+        .cart-badge{
+          left: 270px
+        }
+      }
+      ul{
+        all: unset;
+        margin-left: 20px;
+        width: 300px;
+        @include flex(row, flex-start, center);
+
+        li{
+          all: unset;
+          color: $purple;
+          font-size: 20px;
+          font-weight: bold;
+          margin-right: 20px;
+        }
+      }
+    }
+    .header__bottom{
+      height: 50px;
+      @include flex(row, flex-start, center);
+
+      .mobile-menu{
+        display: none;
+      }
+      .desktop-menu{
+        all:unset;
+        margin-left: 20px;
+        width: 400px;
+        @include flex(row, flex-start, center);
+
+        li{
+          all: unset;
+          color: $purple;
+          font-size: 15px;
+          margin-right: 20px;
         }
       }
     }
