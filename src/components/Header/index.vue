@@ -8,7 +8,7 @@
         <ul>
           <li v-for="item in menuOptions.slice(0,3)" v-bind:key="item">{{item}}</li>
         </ul>
-        <img class="mobile-logo" src="../../assets/store-logo.png" alt="">
+        <img class="mobile-logo" src="../../assets/img/store-logo.png" alt="">
         <div class="mobile-cart">
           <FontAwesomeIcon icon="shopping-cart"/>
           <span class="cart-badge">0</span>

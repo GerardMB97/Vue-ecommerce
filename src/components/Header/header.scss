@@ -144,7 +144,7 @@ header{
       .desktop-menu{
         all:unset;
         margin-left: 20px;
-        width: 400px;
+        width: 500px;
         @include flex(row, flex-start, center);
 
         li{
