@@ -2,7 +2,7 @@
 @import '../../assets/styles/mixins';
 
 .container{
-  margin-top: 100px;
+  margin-top: 10px;
   .carousel{
     margin: unset;
   }
@@ -19,12 +19,13 @@
     }
   }
   .slide:last-child{
-    background-color: $purple;
+    background-color: $green;
   }
 }
 
 @media screen and (min-width: 1024px){
   .container{
+    margin-top: 80px;
     .slide{
        @include flex(row, space-around, flex-end);
 
