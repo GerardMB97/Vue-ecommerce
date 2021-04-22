@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapActions, mapGetters } from 'vuex';
+import { mapActions } from 'vuex';
 import Component from 'vue-class-component';
 import VueCarousel from 'vue-carousel';
 import Header from './components/Header/index.vue';
@@ -24,11 +24,6 @@ Vue.use(VueCarousel);
     HomeCaroussel,
     HomeProducts,
   },
-  computed: {
-    ...mapGetters({
-      products: 'productsStore/products',
-    }),
-  },
   methods: {
     ...mapActions({
       GET_PRODUCTS: 'productsStore/GET_PRODUCTS',
@@ -42,8 +37,6 @@ export default class App extends Vue {
 
   mounted(): void{
     this.GET_PRODUCTS();
-    console.log(this.$store);
-    console.log(this.products);
   }
 }
 
