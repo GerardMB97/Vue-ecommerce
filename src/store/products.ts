@@ -10,7 +10,7 @@ export default {
     product: {},
   },
   getters: {
-    products: (state:ProductState):Product[] => state.products,
+    products: ({ products }:ProductState):Product[] => products,
   },
   mutations: {
     setProducts(state:ProductState, productsList:Product[]):void {

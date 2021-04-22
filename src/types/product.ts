@@ -11,3 +11,7 @@ export interface ProductState {
   products: Product[],
   product: Product
 }
+
+export interface GET_PRODUCTS {
+  ():Promise<void>
+}

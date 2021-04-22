@@ -2,6 +2,7 @@
   <div>
     <Header/>
     <HomeCaroussel/>
+    <HomeProducts/>
   </div>
 </template>
 
@@ -12,6 +13,8 @@ import Component from 'vue-class-component';
 import VueCarousel from 'vue-carousel';
 import Header from './components/Header/index.vue';
 import HomeCaroussel from './components/HomeCarousel/index.vue';
+import HomeProducts from './components/HomeProducts/index.vue';
+import { GET_PRODUCTS, Product } from './types/product';
 
 Vue.use(VueCarousel);
 
@@ -19,6 +22,7 @@ Vue.use(VueCarousel);
   components: {
     Header,
     HomeCaroussel,
+    HomeProducts,
   },
   computed: {
     ...mapGetters({
@@ -32,9 +36,9 @@ Vue.use(VueCarousel);
   },
 })
 export default class App extends Vue {
-  GET_PRODUCTS
+  GET_PRODUCTS!:GET_PRODUCTS
 
-  products
+  products!:Product[]
 
   mounted(): void{
     this.GET_PRODUCTS();
