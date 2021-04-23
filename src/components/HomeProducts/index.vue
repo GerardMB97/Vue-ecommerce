@@ -1,12 +1,17 @@
 <template>
-  <section>
-    <figure v-for="product in randomProducts" v-bind:key="product.id">
-      <caption>
-        <img :src="product.image" alt="">
+  <section v-if="products.length > 0" class="homeProducts">
+    <div
+    class="product-card"
+    v-for="product in randomProducts"
+    v-bind:key="product.id">
+    <div class="img-container">
+      <img :src="product.image" alt="">
+    </div>
+      <div>
         <h3>{{product.title}}</h3>
-        <p>{{product.price}}</p>
-      </caption>
-    </figure>
+        <p>{{product.price}} €</p>
+      </div>
+    </div>
   </section>
 </template>
 <script lang="ts">

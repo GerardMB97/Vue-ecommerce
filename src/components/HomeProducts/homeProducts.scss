@@ -1,3 +1,39 @@
-section{
-  width: 100%
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/colors';
+.homeProducts{
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10px;
+  
+  @include flex(row, space-around,flex-end);
+  .product-card{
+    height: 300px;
+    width: 40%;
+    margin-bottom: 50px;
+    @include flex(column, flex-start, center);
+    .img-container{
+      height:  100px;
+    }
+    img{
+      height: 100%;
+      width: auto;
+    }
+    h3{
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and(min-width: 1024px){
+  .homeProducts{
+    padding: 0 20px;
+
+    .product-card{
+      width: 20%;
+      .img-container{
+        height: 200px;
+      }
+    }
+  }
 }
