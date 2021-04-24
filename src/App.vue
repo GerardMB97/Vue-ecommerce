@@ -1,10 +1,6 @@
 <template>
   <div>
-    <Header/>
-    <home-caroussel/>
-    <home-products/>
-    <home-categories/>
-    <Footer/>
+    <home/>
   </div>
 </template>
 
@@ -13,22 +9,14 @@ import Vue from 'vue';
 import { mapActions } from 'vuex';
 import Component from 'vue-class-component';
 import VueCarousel from 'vue-carousel';
-import Header from './components/Header/index.vue';
-import HomeCaroussel from './components/HomeCarousel/index.vue';
-import HomeProducts from './components/HomeProducts/index.vue';
-import HomeCategories from './components/HomeCategories/index.vue';
-import Footer from './components/Footer/index.vue';
+import Home from './views/Home.vue';
 import { GET_PRODUCTS, Product } from './types/product';
 
 Vue.use(VueCarousel);
 
 @Component({
   components: {
-    Header,
-    HomeCaroussel,
-    HomeProducts,
-    HomeCategories,
-    Footer,
+    Home,
   },
   methods: {
     ...mapActions({
