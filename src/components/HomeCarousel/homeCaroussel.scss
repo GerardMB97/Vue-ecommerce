@@ -1,0 +1,42 @@
+@import '../../assets/styles//colors';
+@import '../../assets/styles/mixins';
+
+.container{
+  margin-top: 10px;
+  .carousel{
+    margin: unset;
+  }
+  .slide{
+    height: 250px;
+    background-color: $green;
+    width: 100%;
+
+    @include flex(column, space-between, center);
+
+    img{
+      height: auto;
+      width: 100%;
+    }
+  }
+  .slide:last-child{
+    background-color: $purple;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .container{
+    margin-top: 80px;
+    .slide{
+       @include flex(row, space-around, flex-end);
+
+       img{
+         height: 250px;
+         width: auto;
+       }
+       h2{
+         margin-bottom: 180px;
+         font-size: 30px;
+       }
+    }
+  }
+}
