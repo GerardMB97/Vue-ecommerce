@@ -1,0 +1,45 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/colors';
+section{
+  @include flex(column, space-between, center);
+.category-card{
+  position: relative;
+  width: 80%;
+  margin-bottom: 10px;
+
+  img{
+    width: 100%;
+  }
+  .name-container{
+    width: 50%;
+    height: 50%;
+    background-color: $transparentWhite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25%;
+    margin-top: -20%;
+    font-size: 15px;
+    @include flex(row, center, center);
+    h2{
+      text-align: center;
+      color: $darkGray;
+    }
+  }
+}
+}
+
+@media screen and(min-width: 1024px){
+  section{
+    flex-wrap: wrap;
+    @include flex(row, center, flex-start);
+    margin-top: 40px;
+
+    .category-card{
+      width: 35%;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 20px;
+    }
+  }
+}

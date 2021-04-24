@@ -1,8 +1,9 @@
 <template>
   <div>
     <Header/>
-    <HomeCaroussel/>
-    <HomeProducts/>
+    <home-caroussel/>
+    <home-products/>
+    <home-categories/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import VueCarousel from 'vue-carousel';
 import Header from './components/Header/index.vue';
 import HomeCaroussel from './components/HomeCarousel/index.vue';
 import HomeProducts from './components/HomeProducts/index.vue';
+import HomeCategories from './components/HomeCategories/index.vue';
 import { GET_PRODUCTS, Product } from './types/product';
 
 Vue.use(VueCarousel);
@@ -23,6 +25,7 @@ Vue.use(VueCarousel);
     Header,
     HomeCaroussel,
     HomeProducts,
+    HomeCategories,
   },
   methods: {
     ...mapActions({
