@@ -8,7 +8,7 @@
   }
   .slide{
     height: 250px;
-    background-color: $gray;
+    background-color: $green;
     width: 100%;
 
     @include flex(column, space-between, center);
@@ -19,7 +19,7 @@
     }
   }
   .slide:last-child{
-    background-color: $green;
+    background-color: $purple;
   }
 }
 
