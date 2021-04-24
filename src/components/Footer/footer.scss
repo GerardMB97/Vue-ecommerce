@@ -1,0 +1,14 @@
+@import '../../assets/styles/colors';
+@import '../../assets/styles/mixins';
+
+footer{
+  background-color: $darkGray;
+  color: $white;
+  height: 100px;
+  width: 100%;
+  @include flex(row, space-around, center);
+  .icon{
+    font-size: 20px;
+    color: $white;
+  }
+}
