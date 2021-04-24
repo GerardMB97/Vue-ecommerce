@@ -17,7 +17,9 @@
 
       <div class="header__bottom">
         <ul class="desktop-menu">
-          <li v-for="item in menuOptions.slice(3)" v-bind:key="item">{{item}}</li>
+          <li v-for="item in menuOptions.slice(3)" v-bind:key="item">
+            <router-link :to="'/' + item" class="link">{{item}}</router-link>
+          </li>
         </ul>
         <div class="mobile-menu">
           <button v-on:click="toggleMobileMenu">
