@@ -10,7 +10,7 @@
         <p class="price">{{product.price}} €</p>
         <p>{{product.description}}</p>
         <p class="quantity__title">QUANTITY</p>
-        <input type="number" v-model="quantity">
+        <input type="number" min="0" max="15" v-model="quantity">
         <button>ADD</button>
       </div>
     </article>
