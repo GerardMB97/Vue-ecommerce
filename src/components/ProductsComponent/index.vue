@@ -4,6 +4,7 @@
     class="product-card"
     v-for="product in categoryProducts"
     v-bind:key="product.id">
+    <router-link class="link" :to="'/product/' + product.id">
     <div class="img-container">
       <img :src="product.image" :alt="product.title">
     </div>
@@ -11,8 +12,10 @@
         <h3>{{product.title}}</h3>
         <p>{{product.price}} €</p>
       </div>
-    </div>
+    </router-link>
+  </div>
 </div>
+
 </template>
 
 <script lang="ts">
