@@ -53,10 +53,10 @@ export default class Header extends Vue {
     'Categories',
     'Products',
     'Home',
-    'Electronics',
-    'Jewelery',
-    'Men Clothing',
-    'Women Clothing',
+    'electronics',
+    'jewelery',
+    'men\'s clothing',
+    'women\'s clothing',
   ];
 
   mobileMenuIsActive = false;

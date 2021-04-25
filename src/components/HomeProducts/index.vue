@@ -41,6 +41,6 @@ export default class HomeProducts extends Vue {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import './homeProducts.scss';
 </style>

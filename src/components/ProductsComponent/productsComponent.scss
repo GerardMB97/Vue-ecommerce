@@ -1,0 +1,46 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/colors';
+.products{
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 10px;
+  
+  @include flex(row, space-around,flex-end);
+  .product-card{
+    height: 200px;
+    width: 40%;
+    margin-bottom: 50px;
+    @include flex(column, flex-start, center);
+    .img-container{
+      height:  100px;
+    }
+    img{
+      height: 100%;
+      width: auto;
+    }
+    h3{
+      font-size: 15px;
+      height: 56px;
+      overflow-y: hidden;
+    }
+  }
+}
+
+@media screen and(min-width: 1024px){
+
+  .products{
+    padding: 0 20px;
+    margin-top: 100px;
+      @include flex(row, flex-start,flex-end);
+    .product-card{
+      width: 20%;
+      margin-right: 50px;
+      height: 300px;
+      .img-container{
+        height: 200px;
+      }
+    }
+  }
+}
