@@ -11,7 +11,7 @@
         <p>{{product.description}}</p>
         <p class="quantity__title">QUANTITY</p>
         <input type="number" min="0" max="15" v-model="quantity">
-        <button>ADD</button>
+        <button v-on:click="()=>{ADD_PRODUCT({product, quantity})}">ADD</button>
       </div>
     </article>
   </div>
@@ -20,8 +20,9 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import { Product } from '../../types/product';
+import { ADD_PRODUCT } from '../../types/cart';
 
 @Component({
   props: {
@@ -32,6 +33,11 @@ import { Product } from '../../types/product';
       products: 'productsStore/products',
     }),
   },
+  methods: {
+    ...mapActions({
+      ADD_PRODUCT: 'cartStore/ADD_PRODUCT',
+    }),
+  },
 })
 export default class ProductDetailComponent extends Vue {
   products!: Product[]
@@ -39,6 +45,8 @@ export default class ProductDetailComponent extends Vue {
   id!: string
 
   quantity = 0;
+
+  ADD_PRODUCT!:ADD_PRODUCT
 
   get product():Product {
     console.log(this.id);
