@@ -1,0 +1,63 @@
+@import '../../assets//styles/colors';
+
+section{
+  margin-top: 90px;
+  min-height: 400px;
+}
+
+table{
+    width: 90%;
+    margin: 5%;
+}
+
+th{
+    background: #efefef;
+    padding: 5px;
+}
+
+td {
+  text-align: center;
+}
+
+td:first-child {
+  text-align: start;
+}
+
+.cart__product-name{
+    font-weight: 300;
+    width: 100%;
+}
+
+.cart__product-price{
+    color: #99568b;
+    font-weight: 600;
+}
+
+.total{
+    margin-left: 100px;
+    font-weight: bold;
+}
+
+#buy{
+    width: 90%;
+    margin: 5%;
+    background: #99568b;
+}
+#buy:hover{
+    background: #7e4772;
+}
+
+#delete{
+    background: #99568b;
+}
+#delete:hover{
+    background: #7e4772;
+}
+
+.button{
+  all: unset;
+  background-color: $purple;
+  border-radius: 3px;
+  width: 70px;
+  color: $white;
+}

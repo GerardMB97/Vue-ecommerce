@@ -7,7 +7,6 @@ export default {
   namespaced: true,
   state: {
     products: [],
-    product: {},
   },
   getters: {
     products: ({ products }:ProductState):Product[] => products,

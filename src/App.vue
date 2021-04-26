@@ -1,31 +1,20 @@
 <template>
-  <div>
-    <Header/>
-    <home-caroussel/>
-    <home-products/>
-    <home-categories/>
-  </div>
+  <router-view/>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapActions } from 'vuex';
+import { mapActions, mapMutations } from 'vuex';
 import Component from 'vue-class-component';
 import VueCarousel from 'vue-carousel';
-import Header from './components/Header/index.vue';
-import HomeCaroussel from './components/HomeCarousel/index.vue';
-import HomeProducts from './components/HomeProducts/index.vue';
-import HomeCategories from './components/HomeCategories/index.vue';
+import Home from './views/Home.vue';
 import { GET_PRODUCTS, Product } from './types/product';
 
 Vue.use(VueCarousel);
 
 @Component({
   components: {
-    Header,
-    HomeCaroussel,
-    HomeProducts,
-    HomeCategories,
+    Home,
   },
   methods: {
     ...mapActions({
@@ -46,8 +35,18 @@ export default class App extends Vue {
 </script>
 <style lang="scss">
 @import './assets/styles/fonts.scss';
+@import './assets/styles/colors.scss';
 body{
   margin: 0;
   font-family: $default;
+
+  .link{
+    all: unset;
+    cursor: pointer;
+    color: $purple;
+  }
+  .link:hover{
+    color: $green;
+  }
 }
 </style>
