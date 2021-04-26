@@ -19,7 +19,7 @@ import Footer from '../components/Footer/index.vue';
     Footer,
   },
 })
-export default class Products extends Vue {
+export default class ProductDetail extends Vue {
 
 }
 </script>

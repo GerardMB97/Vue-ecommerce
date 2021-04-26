@@ -4,11 +4,12 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapActions } from 'vuex';
+import { mapActions, mapMutations } from 'vuex';
 import Component from 'vue-class-component';
 import VueCarousel from 'vue-carousel';
 import Home from './views/Home.vue';
 import { GET_PRODUCTS, Product } from './types/product';
+import { SET_CART } from './types/cart';
 
 Vue.use(VueCarousel);
 

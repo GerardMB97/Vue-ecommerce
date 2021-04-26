@@ -11,7 +11,10 @@
         <p>{{product.description}}</p>
         <p class="quantity__title">QUANTITY</p>
         <input type="number" min="0" max="15" v-model="quantity">
-        <button v-on:click="()=>{ADD_PRODUCT({product, quantity})}">ADD</button>
+        <button
+        v-on:click="()=>{ADD_PRODUCT({product, quantity})}">
+        ADD
+        </button>
       </div>
     </article>
   </div>
@@ -22,7 +25,7 @@ import Vue from 'vue';
 import Component from 'vue-class-component';
 import { mapGetters, mapActions } from 'vuex';
 import { Product } from '../../types/product';
-import { ADD_PRODUCT } from '../../types/cart';
+import { ADD_PRODUCT, CartProduct } from '../../types/cart';
 
 @Component({
   props: {
@@ -30,6 +33,7 @@ import { ADD_PRODUCT } from '../../types/cart';
   },
   computed: {
     ...mapGetters({
+      cartProducts: 'cartStore/products',
       products: 'productsStore/products',
     }),
   },
@@ -42,6 +46,8 @@ import { ADD_PRODUCT } from '../../types/cart';
 export default class ProductDetailComponent extends Vue {
   products!: Product[]
 
+  cartProducts!: CartProduct[]
+
   id!: string
 
   quantity = 0;
@@ -49,7 +55,6 @@ export default class ProductDetailComponent extends Vue {
   ADD_PRODUCT!:ADD_PRODUCT
 
   get product():Product {
-    console.log(this.id);
     return this.products.find((product) => product.id === +this.id);
   }
 }
