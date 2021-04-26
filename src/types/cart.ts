@@ -16,5 +16,5 @@ export interface CartState {
 }
 
 export interface ADD_PRODUCT {
-  ({product, quantity}:{product:Product, quantity:number}):void
+  ({products, product, quantity}:{products:CartProduct[], product:Product, quantity:number}):void
 }
