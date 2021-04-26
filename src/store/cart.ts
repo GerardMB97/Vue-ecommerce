@@ -1,6 +1,7 @@
 import { Product } from '@/types/product';
 import { Commit } from 'vuex';
 import { CartProduct, CartState } from '../types/cart';
+import products from './products';
 
 export default {
   namespaced: true,
@@ -12,6 +13,7 @@ export default {
   },
   mutations: {
     addProduct: ({ products }:CartState, product:CartProduct):void => { products.push(product); },
+    deleteProduct: ({ products }:CartState, index:number):void => { products.splice(index, 0)}
   },
   actions: {
     ADD_PRODUCT({ commit }:{ commit:Commit }, { product, quantity }:
