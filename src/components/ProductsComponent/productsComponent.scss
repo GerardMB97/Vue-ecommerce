@@ -15,6 +15,7 @@
     @include flex(column, center, center);
     .img-container{
       height:  100px;
+      width: 100%;
     }
     img{
       height: 100%;

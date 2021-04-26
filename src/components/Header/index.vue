@@ -29,7 +29,12 @@
           </button>
           <div v-bind:class="mobileMenuIsActive ? 'mobile-menu__dropdown' : 'hide'">
             <ul>
-              <li v-for="item in menuOptions" v-bind:key="item">{{item}}</li>
+              <li v-for="item in menuOptions.slice(0,3)" v-bind:key="item">
+                <router-link class="link" :to="'/' + item">{{item}}</router-link>
+              </li>
+              <li v-for="item in menuOptions.slice(3)" v-bind:key="item">
+                <router-link class="link" :to="'/products/' + item">{{item}}</router-link>
+              </li>
             </ul>
           </div>
         </div>
