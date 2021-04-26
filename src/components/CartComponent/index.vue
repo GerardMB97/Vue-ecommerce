@@ -19,7 +19,7 @@
               <h4 class="cart__product-price">{{cartItem.totalPrice}} €</h4>
             </td>
             <td>
-              <Button v-on:click="()=>{deleteProduct(cartItem)}">
+              <Button class="button" v-on:click="()=>{deleteProduct(cartItem)}">
                 Delete
               </Button>
             </td>

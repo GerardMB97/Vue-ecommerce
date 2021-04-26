@@ -7,10 +7,7 @@
   width: 100%;
   padding: 0 10px;
   @include flex(row, space-around,flex-end);
-  .link{
-    all: unset;
-    color: $darkGray;
-  }
+
   .product-card{
     height: 200px;
     width: 40%;

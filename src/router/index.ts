@@ -9,7 +9,9 @@ Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   { path: '/', component: Home },
+  { path: '/Home', component: Home },
   { path: '/products/:category', component: Products },
+  { path: '/products', component: Products },
   { path: '/product/:id', component: ProductDetail },
   { path: '/cart', component: Cart },
 ];

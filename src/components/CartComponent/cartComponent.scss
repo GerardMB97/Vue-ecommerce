@@ -1,3 +1,5 @@
+@import '../../assets//styles/colors';
+
 section{
   margin-top: 90px;
   min-height: 400px;
@@ -50,4 +52,12 @@ td:first-child {
 }
 #delete:hover{
     background: #7e4772;
+}
+
+.button{
+  all: unset;
+  background-color: $purple;
+  border-radius: 3px;
+  width: 70px;
+  color: $white;
 }

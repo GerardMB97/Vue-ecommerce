@@ -40,6 +40,9 @@ export default class ProductsComponent extends Vue {
   category!: string
 
   get categoryProducts(): Product[] {
+    if (this.category === 'all') {
+      return this.products;
+    }
     return this.products.filter((product) => product.category === this.category);
   }
 }

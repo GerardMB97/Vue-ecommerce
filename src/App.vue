@@ -9,7 +9,6 @@ import Component from 'vue-class-component';
 import VueCarousel from 'vue-carousel';
 import Home from './views/Home.vue';
 import { GET_PRODUCTS, Product } from './types/product';
-import { SET_CART } from './types/cart';
 
 Vue.use(VueCarousel);
 
@@ -36,12 +35,18 @@ export default class App extends Vue {
 </script>
 <style lang="scss">
 @import './assets/styles/fonts.scss';
+@import './assets/styles/colors.scss';
 body{
   margin: 0;
   font-family: $default;
 
   .link{
     all: unset;
+    cursor: pointer;
+    color: $purple;
+  }
+  .link:hover{
+    color: $green;
   }
 }
 </style>
