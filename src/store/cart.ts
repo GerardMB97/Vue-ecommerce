@@ -15,7 +15,9 @@ export default {
     addProduct: ({ products }:CartState, product:CartProduct):void => { products.push(product); },
     updateCart:
       (state:CartState, updatedCart:CartProduct[]):void => { state.products = updatedCart; },
-    deleteProduct: ({ products }:CartState, index:number):void => { products.splice(index, 0); },
+    deleteProduct: ({ products }:CartState, cartItem:CartProduct):void => {
+      products.splice(products.indexOf(cartItem), 1);
+    },
   },
   actions: {
     ADD_PRODUCT({ commit, state }:{ commit:Commit, state:CartState }, { product, quantity }:

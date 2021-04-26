@@ -12,7 +12,7 @@
         <p class="quantity__title">QUANTITY</p>
         <input type="number" min="0" max="15" v-model="quantity">
         <button
-        v-on:click="()=>{ADD_PRODUCT({product, quantity})}">
+        v-on:click="()=>{ADD_PRODUCT({product, quantity})}" :disabled="quantity === 0">
         ADD
         </button>
       </div>

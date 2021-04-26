@@ -16,10 +16,10 @@
               <h4 class="cart__product-price">{{cartItem.quantity}}</h4>
             </td>
             <td>
-              <h4 class="cart__product-price">{{cartItem.price}} €</h4>
+              <h4 class="cart__product-price">{{cartItem.totalPrice}} €</h4>
             </td>
             <td>
-              <Button id="delete" variant="contained" color="primary">
+              <Button v-on:click="()=>{deleteProduct(cartItem)}">
                 Delete
               </Button>
             </td>
@@ -35,10 +35,15 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import { mapGetters } from 'vuex';
-import { CartProduct } from '../../types/cart';
+import { mapGetters, mapMutations } from 'vuex';
+import { CartProduct, deleteProduct } from '../../types/cart';
 
 @Component({
+  methods: {
+    ...mapMutations({
+      deleteProduct: 'cartStore/deleteProduct',
+    }),
+  },
   computed: {
     ...mapGetters({
       cartProducts: 'cartStore/products',
@@ -47,6 +52,12 @@ import { CartProduct } from '../../types/cart';
 })
 export default class CartComponent extends Vue {
   cartProducts!:CartProduct[]
+
+  deleteProduct!:deleteProduct
+
+  get totalCart():number {
+    return this.cartProducts.reduce((acc, currentVal) => acc + +currentVal.totalPrice, 0);
+  }
 }
 </script>
 <style lang="scss" scoped>

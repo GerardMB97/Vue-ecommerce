@@ -19,6 +19,8 @@ export interface ADD_PRODUCT {
   ({products, product, quantity}:{products:CartProduct[], product:Product, quantity:number}):void
 }
 
-export interface SET_CART {
-  ():void
+export interface deleteProduct {
+  (cartItem:CartProduct):void
 }
+
+
