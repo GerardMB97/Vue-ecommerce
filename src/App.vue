@@ -39,5 +39,9 @@ export default class App extends Vue {
 body{
   margin: 0;
   font-family: $default;
+
+  .link{
+    all: unset;
+  }
 }
 </style>

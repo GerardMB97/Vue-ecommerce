@@ -11,7 +11,7 @@ const routes: Array<RouteConfig> = [
   { path: '/', component: Home },
   { path: '/products/:category', component: Products },
   { path: '/product/:id', component: ProductDetail },
-  { path: './cart', component: Cart },
+  { path: '/cart', component: Cart },
 ];
 
 const router = new VueRouter({

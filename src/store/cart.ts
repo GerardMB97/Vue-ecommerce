@@ -9,6 +9,7 @@ export default {
   },
   getters: {
     products: ({ products }:CartState):CartProduct[] => products,
+    totalItems: ({ products }:CartState):number => products.length,
   },
   mutations: {
     addProduct: ({ products }:CartState, product:CartProduct):void => { products.push(product); },
