@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header/>
-    <products-component :category="categoryString"/>
+    <products-component :category="category"/>
     <Footer/>
   </div>
 </template>
@@ -25,13 +25,13 @@ interface WithRoute{
   },
   computed: {
     category() {
-      return this.$route.params.category;
+      return this.$route.params.category
+        ? this.$route.params.category
+        : 'all';
     },
   },
 })
 export default class Products extends Vue implements WithRoute {
   category!: string | undefined
-
-  categoryString = this.category || 'all'
 }
 </script>
