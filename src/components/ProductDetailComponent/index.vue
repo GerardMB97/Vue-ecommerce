@@ -54,7 +54,7 @@ export default class ProductDetailComponent extends Vue {
 
   ADD_PRODUCT!:ADD_PRODUCT
 
-  get product():Product {
+  get product():Product|undefined {
     return this.products.find((product) => product.id === +this.id);
   }
 }

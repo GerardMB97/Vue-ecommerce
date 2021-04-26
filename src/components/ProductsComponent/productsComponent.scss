@@ -35,6 +35,7 @@
     padding: 0 20px;
     margin-top: 150px;
     min-height: 550px;
+    margin-left: 5%;
     @include flex(row, flex-start,flex-start);
     .product-card{
       width: 20%;

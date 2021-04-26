@@ -56,7 +56,7 @@ export default class CartComponent extends Vue {
   deleteProduct!:deleteProduct
 
   get totalCart():number {
-    return this.cartProducts.reduce((acc, currentVal) => acc + +currentVal.totalPrice, 0);
+    return +this.cartProducts.reduce((acc, current) => acc + +current.totalPrice, 0).toFixed(2);
   }
 }
 </script>
